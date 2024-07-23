@@ -1,0 +1,43 @@
+3. Graphical User Interface (GUI) adalah antarmuka yang memungkinkan pengguna berinteraksi dengan perangkat lunak menggunakan elemen grafis seperti tombol, kotak teks, dan menu, alih-alih menggunakan baris perintah teks. GUI membuat aplikasi lebih mudah digunakan dan lebih intuitif, terutama bagi pengguna yang tidak terbiasa dengan perintah teks.
+
+import tkinter as tk
+from tkinter import messagebox
+
+def greet():
+    name = entry.get()
+    messagebox.showinfo("Greeting", f"Hello, {name}!")
+
+# Membuat jendela utama
+root = tk.Tk()
+root.title("Greeting App")
+
+# Menambahkan label
+label = tk.Label(root, text="Enter your name:")
+label.pack(pady=10)
+
+# Menambahkan kotak teks
+entry = tk.Entry(root)
+entry.pack(pady=10)
+
+# Menambahkan tombol
+button = tk.Button(root, text="Greet", command=greet)
+button.pack(pady=10)
+
+# Menjalankan aplikasi
+root.mainloop()
+
+capture:
++-----------------------+
+|    Greeting App       |
++-----------------------+
+| Enter your name:      |
+| [_______________]     |
+| [ Greet ]             |
++-----------------------+
+
++-----------------------+
+|        Greeting       |
++-----------------------+
+|   Hello, [nama]!      |
+| [  OK  ]              |
++-----------------------+
