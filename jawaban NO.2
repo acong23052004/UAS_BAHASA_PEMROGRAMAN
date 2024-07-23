@@ -1,0 +1,37 @@
+2. Penanganan eksepsi adalah mekanisme untuk menangani kesalahan yang terjadi selama eksekusi program. Eksepsi memungkinkan programmer untuk menangkap dan menangani kesalahan tanpa menghentikan program secara tiba-tiba.
+
+def divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        return "Error: Division by zero is not allowed."
+    except TypeError:
+        return "Error: Invalid input type."
+    else:
+        return result
+    finally:
+        print("Execution completed.")
+
+# Memanggil fungsi dengan berbagai kasus
+print(divide(10, 2))  # Tidak ada eksepsi
+print(divide(10, 0))  # ZeroDivisionError
+print(divide(10, 'a'))  # TypeError
+
+capture:
+Kasus 1: Tidak ada eksepsi
+plaintext
+Salin kode
+5.0
+Execution completed.
+
+Kasus 2: ZeroDivisionError
+plaintext
+Salin kode
+Error: Division by zero is not allowed.
+Execution completed.
+
+Kasus 3: TypeError
+plaintext
+Salin kode
+Error: Invalid input type.
+Execution completed.
